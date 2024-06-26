@@ -1,0 +1,15 @@
+<!-- <input (input)="term = ($any($event).target.value)" (input) = "n()"> -->
+<div class="search" [ngClass]="search == true ? 'active' : 'disactive'">
+  <form (submit)="log($event)">
+      <input 
+          type="text"
+          #myInput 
+          class="input" 
+          placeholder="Search..." 
+          (input)="term = ($any($event).target.value)"
+          >
+      </form>
+      <button class="btn" (click)="myInput.focus()" (click)="toggle()">
+        <i class="fas fa-search" style="color: white;"></i>
+      </button>
+  </div>
