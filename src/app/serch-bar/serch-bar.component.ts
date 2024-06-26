@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'serch-bar',
@@ -9,13 +9,16 @@ import { Component } from '@angular/core';
   styleUrl: './serch-bar.component.css'
 })
 export class SerchBarComponent {
+  @Output() submmited = new EventEmitter<string>()
+
   term = '';
   search = false;
+
   toggle(){
     this.search = !this.search;
   }
   log(e: any){
     e.preventDefault();
-    console.log(e);
+    this.submmited.emit(this.term)
   }
 }

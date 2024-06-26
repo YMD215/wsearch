@@ -12,5 +12,7 @@ import { SerchBarComponent } from './serch-bar/serch-bar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'wserch';
+  TermSub(e : any){
+    console.log( "this is the words: " , e );
+  }  
 }
