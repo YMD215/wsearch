@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'page-list',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './page-list.component.css'
 })
 export class PageListComponent {
-
+  @Input() pages: any = []
 }

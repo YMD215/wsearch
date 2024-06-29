@@ -1,6 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.table{
+    margin-top: 50px;
+    border-radius: 5px !important;
+    --bs-table-bg: unset;
+    background:rgba(255, 255, 255, 0.445);
+    width: 100%;
+}
+.table > :not(caption) > * > *{
+    padding: 1rem 1rem; 
 }

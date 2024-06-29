@@ -1,1 +1,22 @@
-<p>page-list works!</p>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">count</th>
+        <th scope="col">Snippet</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (page of pages; track $index; let i = $index) {
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ page.title }}</td>
+          <td>{{ page.wordcount }}</td>
+          <td [innerHTML]="page.snippet"></td>
+        </tr>
+      }
+    </tbody>
+  </table>
