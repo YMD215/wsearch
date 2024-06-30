@@ -1,6 +1,8 @@
 <div class="c-container">
     <div class="c-min-container">
         <serch-bar (submmited)="TermSub($event)"></serch-bar>
-        <page-list [pages] = pages></page-list>
+        @if (pages.length){
+            <page-list [pages] = pages></page-list>
+        }
     </div>
 </div>
